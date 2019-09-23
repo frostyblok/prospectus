@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: prospectus_development
+  username: <%= Prospectus.credentials[:username] %>
+  password: <%= Prospectus.credentials[:password] %>
+  host: <%= Prospectus.credentials[:host] %>
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -58,6 +61,9 @@ development:
 test:
   <<: *default
   database: prospectus_test
+  username: <%= Prospectus.credentials[:username] %>
+  password: <%= Prospectus.credentials[:password] %>
+  host: <%= Prospectus.credentials[:host] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
