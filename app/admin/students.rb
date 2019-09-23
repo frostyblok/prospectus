@@ -5,7 +5,7 @@ ActiveAdmin.register Student do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :name, :student_number
+  permit_params :name, :student_number, :school_id
   #
   # or
   #
